@@ -3,7 +3,10 @@ const words = [
     "Cloud Developer",
     "Cloud Architect",
     "Cloud Engineer",
-    "Cloud Consultant"
+    "Cloud Consultant",
+    "Software Engineer",
+    "Solutions Architect",
+    "Security Analyst",
 ];
 
 let index = 0; // Start with the first word
@@ -19,3 +22,9 @@ setInterval(changeWord, 2000);
 
 // Initialize with the first word
 changeWord();
+
+const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
