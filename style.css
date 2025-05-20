@@ -620,3 +620,95 @@ span{
     background-color: #a33d3d;
     color: white;
 }
+
+/* Tablet screens (max-width: 995px) */
+@media (max-width: 995px) {
+    header {
+        padding: 1rem 3%;
+    }
+    .home {
+        flex-direction: column;
+        gap: 3rem;
+        height: auto;
+        padding: 3rem 3%;
+    }
+    .home-img img {
+        width: 60vw;
+        margin-top: 2rem;
+    }
+    .home-content h1 {
+        font-size: 4rem;
+    }
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+    section {
+        padding: 3rem 3%;
+    }
+    .services-container,
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service,
+    .skill {
+        width: 80%;
+    }
+}
+
+/* Phone screens (max-width: 600px) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2%;
+    }
+    nav a {
+        margin-left: 2rem;
+        font-size: 1.4rem;
+    }
+    .home-img img {
+        width: 90vw;
+    }
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+    .home-content h3 {
+        font-size: 1.5rem;
+    }
+    .home-content p {
+        font-size: 1.2rem;
+    }
+    .social-icons a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        margin: 1rem 0.5rem 1rem 0;
+    }
+    .btn, .download-cv .btn, .project-item a {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+    }
+    .service,
+    .skill,
+    .education-item,
+    .experience-item,
+    .project-item {
+        width: 98%;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+    .projects-container,
+    .experience-container,
+    .education-container {
+        gap: 1rem;
+    }
+    .projects h1,
+    .experience h1,
+    .education h1,
+    .skills h1,
+    .services h1,
+    .contact h1 {
+        font-size: 2rem;
+    }
+}
