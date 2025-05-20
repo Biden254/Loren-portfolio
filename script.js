@@ -23,8 +23,12 @@ setInterval(changeWord, 2000);
 // Initialize with the first word
 changeWord();
 
-const hamburger = document.querySelector('.hamburger');
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
-    hamburger.addEventListener('click', () => {
-        nav.classList.toggle('active');
-    });
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    }
+});
