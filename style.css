@@ -621,41 +621,7 @@ span{
     color: white;
 }
 
-/* Tablet screens (max-width: 995px) */
-@media (max-width: 995px) {
-    header {
-        padding: 1rem 3%;
-    }
-    .home {
-        flex-direction: column;
-        gap: 3rem;
-        height: auto;
-        padding: 3rem 3%;
-    }
-    .home-img img {
-        width: 60vw;
-        margin-top: 2rem;
-    }
-    .home-content h1 {
-        font-size: 4rem;
-    }
-    .home-content h3 {
-        font-size: 2.5rem;
-    }
-    section {
-        padding: 3rem 3%;
-    }
-    .services-container,
-    .skills-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .service,
-    .skill {
-        width: 80%;
-    }
-}
-
+/* Hamburger base style */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -675,12 +641,16 @@ span{
     transition: 0.3s;
 }
 
-/* Phone screens (max-width: 600px) */
-@media (max-width: 600px) {
+/* Hamburger and mobile nav for phones and tablets */
+@media (max-width: 995px) {
     header {
+        position: static;
+        width: 100%;        
         flex-direction: column;
         align-items: flex-start;
         padding: 1rem 2%;
+        z-index: 1000;
+        
     }
     .hamburger {
         display: flex;
@@ -690,9 +660,9 @@ span{
         flex-direction: column;
         width: 100%;
         background: #161616;
-        position: absolute;
-        top: 60px;
-        left: 0;
+        position: static;
+        top: unset;
+        left: unset;
         z-index: 1000;
     }
     nav.active {
@@ -708,6 +678,7 @@ span{
     }
     .home-img img {
         width: 90vw;
+        margin-top: 2rem;
     }
     .home-content h1 {
         font-size: 2.5rem;
@@ -749,6 +720,20 @@ span{
     .services h1,
     .contact h1 {
         font-size: 2rem;
+    }
+    .home-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 2rem 0;
+    }
+    .home-img img {
+        width: 60vw;
+        max-width: 250px;
+        min-width: 120px;
+        margin: 0 auto;
+        display: block;
     }
 }
 
