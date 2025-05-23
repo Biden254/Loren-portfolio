@@ -732,3 +732,22 @@ span{
         font-size: 2rem;
     }
 }
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+    margin-left: auto;
+    z-index: 1100;
+}
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #b74b4b;
+    border-radius: 2px;
+    transition: 0.3s;
+}
