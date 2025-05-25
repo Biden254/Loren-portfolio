@@ -676,18 +676,25 @@ span{
         width: 100%;
         display: block;
     }
-    .home-img img {
+    /*.home-img img {
         width: 90vw;
         margin-top: 2rem;
+    } */
+    .home-content {
+    margin-top: 0; /* Remove any extra top margin */
+    padding-top: 0;
     }
     .home-content h1 {
         font-size: 2.5rem;
+        margin-bottom: 1rem;
     }
     .home-content h3 {
         font-size: 1.5rem;
+        margin-bottom: 0.5rem;
     }
     .home-content p {
         font-size: 1.2rem;
+        margin-top: 0.5rem;
     }
     .social-icons a {
         width: 3rem;
@@ -729,10 +736,10 @@ span{
         margin: 1rem 0 2rem 0;
     }
     .home-img img {
-        width: 40vw;
-        max-width: 200px;
-        min-width: 100px;
-        margin: 0 auto;
+        width: 60vw;
+        max-width: 260px;
+        min-width: 120px;
+        margin: 1 rem auto 0 auto;
         display: block;
     }
 }
