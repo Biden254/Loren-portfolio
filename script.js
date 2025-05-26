@@ -25,10 +25,22 @@ changeWord();
 
 document.addEventListener("DOMContentLoaded", function() {
     const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav');
-    if (hamburger && nav) {
+    const navMenu = document.querySelector('nav'); // Renamed `nav` to `navMenu` for clarity
+
+    if (hamburger && navMenu) { // Ensure both elements exist before adding listeners
         hamburger.addEventListener('click', () => {
-            nav.classList.toggle('active');
+            // Toggle 'active' class on both hamburger and navMenu
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Optional: Close nav when a navigation link is clicked
+        // This improves UX by closing the menu once the user selects a section
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active'); // Remove active class from hamburger
+                navMenu.classList.remove('active');   // Remove active class from nav menu
+            });
         });
     }
 });
