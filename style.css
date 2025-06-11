@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+:root {
+    --primary-bg: #1A2B3C; /* Deep Navy Blue */
+    --primary-text: #F8F8F8; /* Off-white for main text on dark backgrounds */
+    --secondary-bg: #F0F0F0; /* Light Grey for section backgrounds/cards */
+    --secondary-text: #333333; /* Rich Charcoal Grey for text on light backgrounds */
+    --accent-teal: #00A896; /* Teal accent */
+    --accent-gold: #ECA427; /* Muted Gold/Mustard accent */
+    --accent-green: #4CAF50; /* Soft Green accent */
+    --accent: var(--accent-teal); /* Default accent, change as needed */
+}
+
 /* GLOBAL STYLES */
 * {
     margin: 0;
@@ -18,8 +29,8 @@ body {
     width: 100%;
     min-height: 100vh; /* Ensures body takes full viewport height */
     overflow-x: hidden; /* Prevent horizontal scroll */
-    background-color: black;
-    color: white;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
 }
 
 /* HEADER */
@@ -29,7 +40,7 @@ header {
     left: 0;
     width: 100%;
     padding: 1.5rem 9%; /* Responsive padding for desktop */
-    background-color: #161616;
+    background-color: var(--primary-bg);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); /* Subtle shadow */
     display: flex;
     justify-content: space-between;
@@ -39,7 +50,7 @@ header {
 
 .logo {
     font-size: 3.5rem;
-    color: #b74b4b;
+    color: var(--accent); /* Changed from #b74b4b */
     font-weight: 800;
     cursor: pointer;
     transition: 0.5s ease;
@@ -47,12 +58,12 @@ header {
 
 .logo:hover {
     transform: scale(1.05);
-    color: #ff6347;
+    color: var(--accent-gold); /* Changed from #ff6347 - subtle hover for logo */
 }
 
 nav a {
     font-size: 1.8rem;
-    color: white;
+    color: var(--primary-text);
     font-weight: 500;
     margin-left: 4rem;
     transition: 0.3s ease;
@@ -61,8 +72,8 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    color: #b74b4b;
-    border-bottom: 3px solid #b74b4b;
+    color: var(--accent); /* Changed from #b74b4b */
+    border-bottom: 3px solid var(--accent); /* Changed from #b74b4b */
 }
 
 /* HAMBURGER MENU (Desktop: Hidden, Mobile: Visible) */
@@ -82,7 +93,7 @@ nav a.active {
     display: block;
     height: 0.4rem;
     width: 100%;
-    background: #b74b4b;
+    background: var(--accent); /* Changed from #b74b4b */
     border-radius: 0.2rem;
     transition: 0.3s ease-in-out;
 }
@@ -97,7 +108,6 @@ nav a.active {
 .hamburger.active span:nth-child(3) {
     transform: translateY(-1rem) rotate(-45deg);
 }
-
 
 /* SECTIONS BASE STYLES */
 section {
@@ -115,7 +125,7 @@ section {
 h1 {
     font-size: 4rem;
     margin-bottom: 4rem;
-    color: #b74b4b;
+    color: var(--accent); /* Changed from #b74b4b */
     position: relative;
     display: inline-block; /* Essential for ::after pseudo-element */
 }
@@ -128,10 +138,9 @@ h1::after {
     transform: translateX(-50%);
     width: 8rem;
     height: 0.4rem;
-    background-color: #b74b4b;
+    background-color: var(--accent); /* Changed from #b74b4b */
     border-radius: 0.2rem;
 }
-
 
 /* HOME SECTION */
 .home {
@@ -155,14 +164,14 @@ h1::after {
     width: 32vw; /* Responsive width */
     max-width: 400px; /* Max size to prevent excessive growth */
     border-radius: 50%;
-    box-shadow: 0 0 25px #b74b4b, 0 0 50px #b74b4b; /* Glow effect */
+    box-shadow: 0 0 25px var(--accent), 0 0 50px var(--accent); /* Glow effect, changed from #b74b4b */
     cursor: pointer;
     transition: 0.5s ease;
 }
 
 .home-img img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 35px #b74b4b, 0 0 70px #b74b4b;
+    box-shadow: 0 0 35px var(--accent), 0 0 70px var(--accent); /* Changed from #b74b4b */
 }
 
 .home-content {
@@ -180,7 +189,7 @@ h1::after {
 }
 
 .home-content span {
-    color: #b74b4b;
+    color: var(--accent); /* Changed from #b74b4b */
 }
 
 .home-content h3 {
@@ -188,13 +197,14 @@ h1::after {
     margin-bottom: 1rem; /* Sufficient space below h3 (for typing text) */
     font-weight: 700;
     display: block; /* Ensure h3 itself is a block-level element to force a new line */
+    color: var(--primary-text); /* Ensure good contrast */
 }
 
 /* TYPING ANIMATION TEXT */
 .typing-text {
     font-size: 2rem;
     font-weight: bold;
-    color: #b74b4b;
+    color: var(--accent); /* Changed from #b74b4b */
     display: inline-block; /* Critical for positioning and sizing */
     position: relative; /* Critical for cursor positioning */
     white-space: nowrap; /* Prevents text from wrapping */
@@ -210,18 +220,18 @@ h1::after {
 
 .typing-text span::after {
     content: "";
-    background-color: black; /* Matches body background to "erase" text */
+    background-color: var(--primary-bg); /* Matches body background to "erase" text */
     position: absolute;
     width: 0.3rem; /* Small initial width for cursor */
     height: 100%;
-    border-left: 0.3rem solid #b74b4b; /* Blinking cursor color */
+    border-left: 0.3rem solid var(--accent); /* Blinking cursor color, changed from #b74b4b */
     right: -0.3rem; /* Position next to the text */
     top: 0;
     animation: cursor 0.6s infinite;
 }
 
 @keyframes cursor {
-    0%, 100% { border-left-color: #b74b4b; } /* Cursor visible */
+    0%, 100% { border-left-color: var(--accent); } /* Cursor visible, changed from #b74b4b */
     50% { border-left-color: transparent; } /* Cursor invisible */
 }
 
@@ -229,6 +239,7 @@ h1::after {
     font-size: 1.6rem;
     max-width: 60rem;
     margin-bottom: 2.5rem;
+    color: var(--primary-text); /* Ensure consistent color */
 }
 
 .social-icons a {
@@ -238,42 +249,41 @@ h1::after {
     width: 4.5rem;
     height: 4.5rem;
     background-color: transparent;
-    border: 0.2rem solid #b74b4b;
+    border: 0.2rem solid var(--accent); /* Changed from #b74b4b */
     font-size: 2.2rem;
     border-radius: 50%;
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease;
-    color: white;
+    color: var(--primary-text);
 }
 
 .social-icons a:hover {
     transform: scale(1.1) translateY(-0.5rem);
-    color: black;
-    background-color: #b74b4b;
-    box-shadow: 0 0 1rem #b74b4b;
+    color: var(--primary-bg); /* Changed from black to primary-bg for better contrast with accent */
+    background-color: var(--accent); /* Changed from #b74b4b */
+    box-shadow: 0 0 1rem var(--accent); /* Changed from #b74b4b */
 }
 
 .btn {
     display: inline-block;
     padding: 1.2rem 3rem;
-    background-color: black;
+    background-color: transparent; /* Changed from primary-bg to transparent for border effect */
     border-radius: 4rem;
     font-size: 1.7rem;
-    color: #b7b7b7;
+    color: var(--accent); /* Changed from primary-bg to accent for text color */
     letter-spacing: 0.1rem;
     font-weight: 600;
-    border: 2px solid #b74b4b;
+    border: 2px solid var(--accent); /* Changed from #b74b4b */
     transition: 0.3s ease;
     cursor: pointer;
 }
 
 .btn:hover {
     transform: scale(1.03);
-    background-color: #b74b4b;
-    color: black;
-    box-shadow: 0 0 1rem #b74b4b;
+    background-color: var(--accent); /* Changed from accent-gold to accent for consistency */
+    color: var(--primary-bg); /* Changed from primary-bg to primary-bg for text color on hover */
+    box-shadow: 0 0 1rem var(--accent); /* Changed from #b74b4b */
 }
-
 
 /* REUSABLE CARD STYLES (for services, skills, education, experience, projects) */
 .services-container,
@@ -288,7 +298,7 @@ h1::after {
 
 .service,
 .skill {
-    background-color: #161616;
+    background-color: var(--primary-bg); /* Changed from #161616 to primary-bg for subtle differentiation */
     padding: 3rem 2rem;
     border-radius: 1.5rem;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
@@ -299,12 +309,13 @@ h1::after {
     display: flex; /* Use flex for vertical centering of content */
     flex-direction: column;
     align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for definition */
 }
 
 .service i,
 .skill i {
     font-size: 4.5rem;
-    color: #b74b4b;
+    color: var(--accent); /* Changed from #b74b4b */
     margin-bottom: 1.5rem;
 }
 
@@ -312,18 +323,19 @@ h1::after {
 .skill h2 {
     font-size: 2.4rem;
     margin-bottom: 1rem;
+    color: var(--primary-text); /* Ensure headings inside cards are visible */
 }
 
 .service p,
 .skill p {
     font-size: 1.5rem;
-    color: #b7b7b7;
+    color: var(--primary-text); /* Changed from #b7b7b7 for better consistency */
 }
 
 .service:hover,
 .skill:hover {
     transform: translateY(-1rem) scale(1.02);
-    box-shadow: 0 1rem 2rem #b74b4b;
+    box-shadow: 0 1rem 2rem var(--accent); /* Changed from #b74b4b */
 }
 
 .education-container,
@@ -342,19 +354,20 @@ h1::after {
 .education-item,
 .experience-item,
 .project-item {
-    background-color: #161616;
+    background-color: var(--primary-bg); /* Changed from #161616 to primary-bg for subtle differentiation */
     padding: 2.5rem;
     border-radius: 1.5rem;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for definition */
 }
 
 .education-item h2,
 .experience-item h2,
 .project-item h2 {
     font-size: 2.2rem;
-    color: #b74b4b;
+    color: var(--accent); /* Changed from #b74b4b */
     margin-bottom: 1rem;
 }
 
@@ -362,7 +375,7 @@ h1::after {
 .experience-item p,
 .project-item p {
     font-size: 1.5rem;
-    color: #b7b7b7;
+    color: var(--primary-text); /* Changed from #b7b7b7 for better consistency */
     margin-bottom: 0.5rem;
 }
 
@@ -370,8 +383,8 @@ h1::after {
     display: inline-block;
     margin-top: 1.5rem;
     padding: 1rem 2.5rem;
-    background-color: #b74b4b;
-    color: black;
+    background-color: var(--accent); /* Changed from #b74b4b */
+    color: var(--primary-bg); /* Changed from black to primary-bg for text color on accent background */
     text-decoration: none;
     border-radius: 0.8rem;
     font-size: 1.5rem;
@@ -379,8 +392,8 @@ h1::after {
 }
 
 .project-item a:hover {
-    background-color: #a33d3d;
-    color: white;
+    background-color: var(--accent-gold); /* Changed from #a33d3d to a different accent for hover */
+    color: var(--primary-bg); /* Changed from primary-text to primary-bg */
     transform: translateY(-0.2rem);
 }
 
@@ -388,7 +401,7 @@ h1::after {
 .experience-item:hover,
 .project-item:hover {
     transform: translateY(-0.5rem) scale(1.01);
-    box-shadow: 0 0.8rem 1.8rem #b74b4b;
+    box-shadow: 0 0.8rem 1.8rem var(--accent); /* Changed from #b74b4b */
 }
 
 /* CONTACT SECTION */
@@ -408,23 +421,24 @@ h1::after {
     flex: 1;
     min-width: 320px;
     padding: 2.5rem;
-    background-color: #161616;
+    background-color: var(--primary-bg); /* Changed from #161616 to primary-bg */
     border-radius: 1.5rem;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
     text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for definition */
 }
 
 .contact-info h2,
 .contact-form h2 {
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
-    color: #b74b4b;
+    color: var(--accent); /* Changed from #b74b4b */
     text-align: center;
 }
 
 .contact-info p {
     font-size: 1.5rem;
-    color: #b7b7b7;
+    color: var(--primary-text); /* Changed from #b7b7b7 */
     margin: 1rem 0;
     display: flex;
     align-items: center;
@@ -433,7 +447,7 @@ h1::after {
 
 .contact-info p i {
     font-size: 2rem;
-    color: #b74b4b;
+    color: var(--accent); /* Changed from #b74b4b */
 }
 
 .contact-form form {
@@ -446,10 +460,10 @@ h1::after {
 .contact-form textarea {
     width: 100%;
     padding: 1.2rem;
-    border: 1px solid #b74b4b;
+    border: 1px solid var(--accent); /* Changed from #b74b4b */
     border-radius: 0.8rem;
-    background-color: #0d0d0d;
-    color: white;
+    background-color: var(--primary-bg); /* Changed from #0d0d0d to primary-bg for a softer look */
+    color: var(--primary-text);
     font-size: 1.5rem;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -457,14 +471,14 @@ h1::after {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #ff6347;
-    box-shadow: 0 0 0.5rem #b74b4b;
+    border-color: var(--accent); /* Changed from #ff6347 to accent */
+    box-shadow: 0 0 0.5rem var(--accent); /* Changed from #b74b4b */
 }
 
 .contact-form button {
     padding: 1.2rem 2.5rem;
-    background-color: #b74b4b;
-    color: black;
+    background-color: var(--accent); /* Changed from #b74b4b */
+    color: var(--primary-bg); /* Changed from black to primary-bg */
     border: none;
     border-radius: 0.8rem;
     font-size: 1.7rem;
@@ -474,8 +488,8 @@ h1::after {
 }
 
 .contact-form button:hover {
-    background-color: #a33d3d;
-    color: white;
+    background-color: var(--accent-gold); /* Changed from #a33d3d to a different accent for hover */
+    color: var(--primary-bg); /* Changed from primary-text to primary-bg */
     transform: translateY(-0.2rem);
 }
 
@@ -485,40 +499,41 @@ h1::after {
     margin-top: 5rem;
     margin-bottom: 5rem;
     padding: 3rem 9%;
-    background-color: #161616;
+    background-color: var(--primary-bg); /* Changed from #161616 to primary-bg */
     border-radius: 1.5rem;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for definition */
 }
 
 .download-cv h2 {
     font-size: 2.8rem;
     margin-bottom: 2rem;
-    color: #b74b4b;
+    color: var(--accent); /* Changed from #b74b4b */
 }
 
 .download-cv .btn {
     padding: 1.2rem 3rem;
     font-size: 1.7rem;
-    background-color: #b74b4b;
-    color: black;
-    border: none;
+    background-color: var(--accent); /* Changed from #b74b4b */
+    color: var(--primary-bg); /* Changed from black to primary-bg */
+    border: none; /* Changed to none as background is already solid */
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .download-cv .btn:hover {
-    background-color: #a33d3d;
-    color: white;
+    background-color: var(--accent-gold); /* Changed from #a33d3d to a different accent for hover */
+    color: var(--primary-bg); /* Changed from primary-text to primary-bg */
     box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.4);
 }
 
 /* FOOTER */
 footer {
     padding: 3rem 9%;
-    background-color: #161616;
-    color: #b7b7b7;
+    background-color: var(--primary-bg); /* Changed from #161616 to primary-bg */
+    color: var(--primary-text); /* Changed from #b7b7b7 for consistency */
     text-align: center;
     font-size: 1.4rem;
     border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
@@ -570,7 +585,7 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #161616;
+        background-color: var(--primary-bg); /* Changed from #161616 to primary-bg */
         flex-direction: column;
         align-items: center;
         padding: 2rem 0;
@@ -597,8 +612,8 @@ footer {
 
     nav a:hover,
     nav a.active {
-        color: #b74b4b;
-        background-color: rgba(183, 75, 75, 0.1);
+        color: var(--accent); /* Changed from #b74b4b */
+        background-color: rgba(0, 168, 150, 0.1); /* Using the accent color with transparency */
         border-bottom: none;
     }
 
