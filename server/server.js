@@ -27,11 +27,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 if (process.env.NODE_ENV === 'production') {
   //const path = require('path');
   // Serve static files from the React app
-  app.use(express.static(path.join(__dirname, '../dist')));
+  app.use(express.static(path.join(__dirname, '../')));
   
   // Handle React routing, return all requests to React app
   app.get('/*path', (req, res) => {
-    res.sendFile(path.join(__dirname, '../dist/index.html'));
+    res.sendFile(path.join(__dirname, '../index.html'));
   });
 } else {
   // In development, just serve the API
