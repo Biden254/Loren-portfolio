@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: loren-portfolio-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: EMAIL_HOST
+        sync: false
+      - key: EMAIL_PORT
+        value: '587'
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: TO_EMAIL
+        sync: false

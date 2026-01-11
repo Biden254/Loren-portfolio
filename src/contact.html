@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../src/styles/style.css">
     <title>Contact - Loren's Portfolio</title>
 </head>
 <body>
@@ -30,15 +30,16 @@
             </div>
             <div class="contact-form">
                 <h2>Send a Message</h2>
-                <form name="contact" method="POST" netlify>
+                <form name="contact" id="contactForm" novalidate>
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="text" name="subject" placeholder="Subject"> <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
-    <script src="script.js"></script>
+    <script src="../src/js/form-handler.js"></script>
 </body>
 </html>
