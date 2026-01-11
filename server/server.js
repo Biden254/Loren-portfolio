@@ -42,9 +42,10 @@ if (process.env.NODE_ENV === 'production') {
 
 // Create reusable transporter object using the default SMTP transport
 const transporter = nodemailer.createTransport({
-  host: process.env.EMAIL_HOST,
-  port: process.env.EMAIL_PORT,
-  secure: process.env.SECURE === 'true', // true for 465, false for other ports
+  //host: process.env.EMAIL_HOST,
+  //port: process.env.EMAIL_PORT,
+  //secure: process.env.SECURE === 'true', // true for 465, false for other ports
+  service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -52,6 +53,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Test the transporter
+/*
 const verifyTransporter = async () => {
   try {
     await transporter.verify();
@@ -59,9 +61,9 @@ const verifyTransporter = async () => {
   } catch (error) {
     console.error('Error verifying transporter:', error);
   }
-};
+}; */
 
-verifyTransporter();
+//verifyTransporter();
 
 // Start the server
 app.listen(PORT, () => {
