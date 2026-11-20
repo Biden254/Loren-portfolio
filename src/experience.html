@@ -3,80 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="theme-color" content="#101613">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Engineering experience of Loren Deklerk: full-stack volunteer work at Solution Community on authentication, account workflows, and application features, plus training and education.">
+    <meta property="og:title" content="Experience — Loren Deklerk">
+    <meta property="og:description" content="Full-stack engineering experience across authentication, account workflows, application features, APIs, and team collaboration.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deklerk.netlify.app/experience.html">
+    <link rel="canonical" href="https://deklerk.netlify.app/experience.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Experience - Loren's Portfolio</title>
+    <title>Experience — Loren Deklerk</title>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">Loren</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="skills.html">Skills</a>
-            <a href="education.html">Education</a>
-            <a href="experience.html" class="active">Experience</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">LD</span>
+                <span class="brand-name">
+                    <strong>Loren Deklerk</strong>
+                    <span>Full-Stack Engineer</span>
+                </span>
+            </a>
+            <a class="header-cv" href="assets/docs/Loren-Deklerk-CV.pdf" download="Loren-Deklerk-CV.pdf" aria-label="Download CV as PDF">Download CV</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <nav class="nav" id="primary-nav" aria-label="Primary">
+                <a href="projects.html">Work</a>
+                <a href="experience.html" aria-current="page">Experience</a>
+                <a href="services.html">Services</a>
+                <a href="index.html#about">About</a>
+                <a href="contact.html">Contact</a>
+                <a class="nav-cv-link" href="assets/docs/Loren-Deklerk-CV.pdf" download="Loren-Deklerk-CV.pdf">Download CV</a>
+            </nav>
+        </div>
     </header>
-    <section class="experience">
-        <h1>My Experience</h1>
-        <div class="experience-container">
-            <div class="experience-item">
-                <h2>Full Stack Developer</h2>
-                <p><strong>Company:</strong> Solution Community</p>
-                <p><strong>Year:</strong> 2026</p>
-                <p>Built responsive web applications using modern JavaScript frameworks and libraries following DevOps practices.</p>
+
+    <main id="main">
+        <section class="page-intro">
+            <div class="container">
+                <span class="section-label">Experience</span>
+                <h1>Engineering work, in a team</h1>
+                <p>My current engineering experience is collaborative and product-focused: implementing features, working through review, and shipping changes that affect a real application. Training and education are listed separately from professional experience.</p>
+                <div class="page-meta">
+                    <span>Volunteer full-stack engineer</span>
+                    <span>Remote · 2026 — present</span>
+                    <span>Authentication &amp; account workflows</span>
+                </div>
             </div>
-            <div class="experience-item">
-                <h2>Cloud Practitioner Student</h2>
-                <p><strong>Company:</strong> AWS re/Start Program</p>
-                <p><strong>Year:</strong> 2025</p>
-                <p>Worked on hands-on projects involving AWS core services, cloud architecture, and cost optimization strategies.</p>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <span class="section-label">Professional experience</span>
+                        <h2 class="section-title">Current role</h2>
+                    </div>
+                </div>
+
+                <article class="role">
+                    <div class="role-head">
+                        <div>
+                            <h3>Full-Stack Software Engineer (Volunteer)</h3>
+                            <p class="role-org">Solution Community</p>
+                        </div>
+                        <span class="role-period">2026 — Present</span>
+                    </div>
+                    <p class="role-summary">I contribute to a collaborative software engineering team working on a real application. My work covers full-stack feature development, with a significant focus on account and authentication functionality across development, QA, and production environments.</p>
+                    <ul class="bullet-list">
+                        <li>Develop full-stack application features across frontend and backend systems.</li>
+                        <li>Implement account and authentication functionality, including email verification, password management, user profiles, and protected application pages.</li>
+                        <li>Integrated Google and Apple authentication across development, QA, and production environments.</li>
+                        <li>Contribute to platform features and application workflows involving APIs, databases, and development tooling.</li>
+                        <li>Collaborate through Git, pull requests, code reviews, testing, and the team's engineering workflow.</li>
+                    </ul>
+                    <div class="role-foot">
+                        <span class="tag">Python</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Authentication</span>
+                        <span class="tag">Git</span>
+                    </div>
+                </article>
+
+                <div class="note" style="margin-top: 1.5rem;">
+                    <span><strong>Confidentiality:</strong> this is a volunteer engineering role on a product built by a team. Internal architecture, private repositories, infrastructure configuration, and product-specific business logic are not published here. The bullets describe my own work at the level that can be shared publicly.</span>
+                </div>
             </div>
-            <div class="experience-item">
-                <h2>Software Developer</h2>
-                <p><strong>Company:</strong> Electronic Arts</p>
-                <p><strong>Year:</strong> 2025 - 2025</p>
-                <p>Developed and maintained software solutions for game development projects, focusing on performance, scalability and object oriented design.</p>
+        </section>
+
+        <section class="section section-soft">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <span class="section-label">Working practice</span>
+                        <h2 class="section-title">How I operate on an engineering team</h2>
+                        <p class="section-lead">The habits below come from working in a shared codebase rather than from isolated tutorials.</p>
+                    </div>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card">
+                        <div class="card-eyebrow"><span class="index">01</span> Collaboration</div>
+                        <h3>Git-based workflow</h3>
+                        <p>Branching, pull requests, code review, and resolving review feedback. Changes are kept small enough to be reviewed and understood.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-eyebrow"><span class="index">02</span> Quality</div>
+                        <h3>Testing &amp; debugging</h3>
+                        <p>Reproducing issues, tracing them through frontend and backend code, and checking that existing behaviour still works after a change.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-eyebrow"><span class="index">03</span> Delivery</div>
+                        <h3>Environment awareness</h3>
+                        <p>Working across development, QA, and production configuration — including authentication providers and environment-specific setup.</p>
+                    </article>
+                </div>
             </div>
-            
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <span class="section-label">Training &amp; education</span>
+                        <h2 class="section-title">Kept separate from employment</h2>
+                        <p class="section-lead">Courses and qualifications are listed here for context. They are not presented as professional engineering roles.</p>
+                    </div>
+                    <a href="education.html" class="link-arrow section-link">Full education &amp; certifications</a>
+                </div>
+
+                <div class="timeline">
+                    <div class="entry">
+                        <div class="entry-meta">
+                            <strong>Expected 2027</strong>
+                            In progress
+                        </div>
+                        <div>
+                            <h3>BSc Computer Science</h3>
+                            <p class="entry-org">Dedan Kimathi University of Technology</p>
+                            <p>Computer science fundamentals alongside independent application development. Expected completion in 2027.</p>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <div class="entry-meta">
+                            <strong>2025</strong>
+                            Completed
+                        </div>
+                        <div>
+                            <h3>AWS re/Start — Gold</h3>
+                            <p class="entry-org">AWS Training and Certification</p>
+                            <p>Intensive cloud training covering Linux, networking, Python, and core AWS services, completed with a Gold outcome.</p>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <div class="entry-meta">
+                            <strong>In progress</strong>
+                            <span class="status-pill">Ongoing</span>
+                        </div>
+                        <div>
+                            <h3>AWS DevOps training</h3>
+                            <p class="entry-org">Amazon Web Services</p>
+                            <p>Ongoing study of deployment and operations practices. Not presented as a completed qualification.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-links" style="margin-top: 2rem;">
+                    <a class="btn btn-primary" href="assets/docs/Loren-Deklerk-CV.pdf" target="_blank" rel="noopener noreferrer">View CV (PDF)</a>
+                    <a class="btn btn-secondary" href="contact.html">Discuss a project</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="container">
+                <div>
+                    <h2>Looking for someone who can join an existing codebase?</h2>
+                    <p>I can start with a defined feature, a bug, or an integration and work within your team's review process.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-primary">Discuss a project</a>
+                    <a href="mailto:bidendeclerk@gmail.com" class="btn btn-secondary">Email me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark" aria-hidden="true">LD</span>
+                        <span class="brand-name">
+                            <strong>Loren Deklerk</strong>
+                            <span>Full-Stack Engineer</span>
+                        </span>
+                    </a>
+                    <p>Full-stack software engineer building web applications, backend systems, and REST APIs with Python, Django, React, and TypeScript.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Pages</h3>
+                    <ul>
+                        <li><a href="projects.html">Work</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Elsewhere</h3>
+                    <ul>
+                        <li><a href="https://github.com/Biden254" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/loren-deklerk/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="mailto:bidendeclerk@gmail.com">Email</a></li>
+                        <li><a href="assets/docs/Loren-Deklerk-CV.pdf" target="_blank" rel="noopener noreferrer">View CV (PDF)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© <span data-current-year>2026</span> Loren Deklerk · Nairobi, Kenya</span>
+                <span>Built with HTML, CSS, JavaScript, and Express</span>
+            </div>
         </div>
-        <div class="download-cv">
-            <h2>Download My CV</h2>
-            <a href="../Loren Deklerk_Software Engineer.pdf" class="btn" download>Download CV</a>
-        </div>
-    </section>
-    <section class="projects">
-        <h1>My Projects</h1>
-        <div class="projects-container">
-            <div class="project-item">
-                <h2>Sweet Crumbs</h2>
-                <p><strong>Repository:</strong> <a href="https://github.com/Biden254/Sweet-Crumbs" target="_blank" rel="noopener noreferrer">Sweet Crumbs on GitHub</a></p>
-                <p>A simple bakery-focused web project with a clean product showcase experience.</p>
-            </div>
-            <div class="project-item">
-                <h2>Website Hosting on AWS</h2>
-                <p>Deployed a static website using Amazon S3 and configured CloudFront for global content delivery.</p>
-                <a href="../Website-hosting-doc.pdf" target="_blank" class="btn">View Documentation</a>
-            </div>
-            <div class="project-item">
-                <h2>Smart Attachment System</h2>
-                <p><strong>Repository:</strong> <a href="https://github.com/Biden254/smart-attachment-system" target="_blank" rel="noopener noreferrer">Smart Attachment System on GitHub</a></p>
-                <p>A smart file handling project built to organize and manage attachments more efficiently.</p>
-            </div>
-            <div class="project-item">
-                <h2>Luxe Voyage</h2>
-                <p><strong>Repository:</strong> <a href="https://github.com/Biden254/Luxe-Voyage" target="_blank" rel="noopener noreferrer">Luxe Voyage on GitHub</a></p>
-                <p>A travel planning project centered on a polished booking and destination browsing experience.</p>
-            </div>
-            <div class="project-item">
-                <h2>Julie Bakers</h2>
-                <p><strong>Repository:</strong> <a href="https://github.com/Biden254/Julie-Bakers" target="_blank" rel="noopener noreferrer">Julie Bakers on GitHub</a></p>
-                <p>A bakery web project designed to present products and services in a simple, appealing way.</p>
-            </div>
-        </div>
-    </section>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>

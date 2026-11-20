@@ -3,45 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="theme-color" content="#101613">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Loren Deklerk is a full-stack software engineer building web applications, backend systems, and REST APIs with Python, Django, React, and TypeScript.">
+    <meta property="og:title" content="Loren Deklerk — Full-Stack Software Engineer">
+    <meta property="og:description" content="Full-stack software engineering with Python, Django, React, TypeScript, backend systems, and REST APIs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deklerk.netlify.app/">
+    <link rel="canonical" href="https://deklerk.netlify.app/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Loren's Portfolio</title>
+    <title>Loren Deklerk — Full-Stack Software Engineer</title>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">Loren</a>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">LD</span>
+                <span class="brand-name">
+                    <strong>Loren Deklerk</strong>
+                    <span>Full-Stack Engineer</span>
+                </span>
+            </a>
+            <a class="header-cv" href="assets/docs/Loren_Deklerk_Full_Stack_Software_Engineer_CV.pdf" download="Loren_Deklerk_Full_Stack_Software_Engineer_CV.pdf" aria-label="Download CV as PDF">Download CV</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <nav class="nav" id="primary-nav" aria-label="Primary">
+                <a href="index.html#about" aria-current="page">About</a>
+                <a href="projects.html">Work</a>
+                <a href="experience.html">Experience</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a class="nav-cv-link" href="assets/docs/Loren_Deklerk_Full_Stack_Software_Engineer_CV.pdf" download="Loren_Deklerk_Full_Stack_Software_Engineer_CV.pdf">Download CV</a>
+            </nav>
         </div>
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="services.html">Services</a>
-            <a href="skills.html">Skills</a>
-            <a href="education.html">Education</a>
-            <a href="experience.html">Experience</a>
-            <a href="contact.html">Contact</a>
-        </nav>
     </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="pfp.jpeg" alt="Loren">
-        </div>
-        <div class="home-content">
-            <h1>Hi, it's <span>Loren</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
-            <p>passionate developer and tech enthusiast on a mission to turn ideas into impactful digital experiences. Whether I'm building sleek user interfaces, solving complex backend challenges, or exploring emerging technologies, I love crafting solutions that are both beautiful and functional. Welcome to my corner of the web, let’s create something amazing together.
-            </p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/loren-deklerk" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/Biden254" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/wintercreed254?t=0RF16LB6TJ1sX0iS1GHApQ&s=09" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.instagram.com/wintercreed/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
+    <main id="main">
+        <section class="hero" id="about">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="hero-kicker">ENGINEERING DOSSIER <span>— 01 / NAIROBI, KE</span></span>
+                    <p class="hero-name">LOREN DEKLERK</p>
+                    <h1>FULL-STACK<br><span class="hero-line">SOFTWARE ENGINEER.</span></h1>
+                    <p class="lead">I build reliable web applications, backend systems, and REST APIs using Python, Django, React, and TypeScript.</p>
+                    <div class="hero-actions">
+                        <a href="projects.html" class="btn btn-primary">Explore My Work</a>
+                        <a href="contact.html" class="btn btn-secondary">Discuss a Project</a>
+                        <a href="assets/docs/Loren_Deklerk_Full_Stack_Software_Engineer_CV.pdf" class="hero-cv" download="Loren_Deklerk_Full_Stack_Software_Engineer_CV.pdf">Download CV</a>
+                    </div>
+                    <nav class="hero-social" aria-label="Professional profiles">
+                        <a href="https://github.com/Biden254" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/loren-deklerk/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </nav>
+                    <div class="hero-meta">
+                        <span>Nairobi, Kenya · UTC+3</span>
+                        <span>Volunteer engineer, Solution Community</span>
+                        <span>Python / Django / React</span>
+                    </div>
+                </div>
+                <div class="portrait" data-portrait>
+                    <div class="portrait-frame">
+                        <img src="assets/pfp.jpeg" alt="Loren Deklerk" width="1024" height="963" fetchpriority="high">
+                        <div class="portrait-fallback" aria-hidden="true">LD</div>
+                    </div>
+                    <div class="portrait-note">
+                        <span class="dot" aria-hidden="true"></span>
+                        <div>
+                            <span class="mono">Solution Community · Volunteer</span>
+                            <strong>Building account &amp; auth features</strong>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="contact.html" class="btn">Hire me</a>
+        </section>
+
+        <div class="tech-strip">
+            <div class="container">
+                <span class="label">Working stack</span>
+                <ul style="display: contents;">
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>REST APIs</li>
+                    <li>React</li>
+                    <li>TypeScript</li>
+                    <li>PostgreSQL</li>
+                    <li>Docker</li>
+                    <li>AWS</li>
+                </ul>
+            </div>
         </div>
-    </section>
+
+        <section class="section" id="work">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <span class="section-label">01 — Selected work</span>
+                        <h2 class="section-title">Software built to solve a concrete problem</h2>
+                        <p class="section-lead">Selected projects across Django backends, REST APIs, database design, and React front ends. Each entry describes what the software does and the engineering decisions behind it.</p>
+                    </div>
+                    <a href="projects.html" class="link-arrow section-link">All projects</a>
+                </div>
+
+                <div class="grid grid-3">
+                    <article class="card project-card">
+                        <div class="card-eyebrow"><span class="index">01</span> Backend + frontend</div>
+                        <h3>Nena na Daktari</h3>
+                        <p>A consultation assistant for clinicians: captures consultation audio, structures clinical history, and surfaces evidence-backed medical suggestions.</p>
+                        <ul class="project-points">
+                            <li>Django REST Framework API split into accounts, patients, and encounters apps.</li>
+                            <li>Typed React client consuming the API; PostgreSQL in production.</li>
+                            <li>Docker Compose local environment and GitHub Actions CI.</li>
+                        </ul>
+                        <ul class="tag-list">
+                            <li class="tag">Django REST</li>
+                            <li class="tag">React</li>
+                            <li class="tag">TypeScript</li>
+                            <li class="tag">PostgreSQL</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a class="link-arrow" href="projects.html#nena">Project details</a>
+                            <span class="spacer"></span>
+                            <a class="link-arrow link-external" href="https://nena-na-daktari.vercel.app" target="_blank" rel="noopener noreferrer">Live</a>
+                        </div>
+                    </article>
+
+                    <article class="card project-card">
+                        <div class="card-eyebrow"><span class="index">02</span> Django application</div>
+                        <h3>Sweet Crumbs</h3>
+                        <p>A bakery e-commerce application with a product catalog, session-based cart and checkout, order tracking, and email-based accounts.</p>
+                        <ul class="project-points">
+                            <li>Django 5 project structured by domain: products, orders, accounts, and core.</li>
+                            <li>Order and order-item models covering the full order lifecycle.</li>
+                            <li>Tailwind templates, django-allauth authentication, PostgreSQL-ready configuration.</li>
+                        </ul>
+                        <ul class="tag-list">
+                            <li class="tag">Python</li>
+                            <li class="tag">Django</li>
+                            <li class="tag">PostgreSQL</li>
+                            <li class="tag">Tailwind</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a class="link-arrow" href="projects.html#sweet-crumbs">Project details</a>
+                            <span class="spacer"></span>
+                            <a class="link-arrow link-external" href="https://github.com/Biden254/Sweet-Crumbs" target="_blank" rel="noopener noreferrer">Code</a>
+                        </div>
+                    </article>
+
+                    <article class="card project-card featured-project">
+                        <div class="card-eyebrow"><span class="index">03</span> Workflow tooling</div>
+                        <a class="project-visual" href="projects.html#workflow-tracker" aria-label="View Workflow Tracker project details">
+                            <img src="assets/projects/workflow-tracker.png" alt="Workflow Tracker application list screen showing application states" loading="lazy" width="1440" height="900">
+                        </a>
+                        <h3>Workflow Tracker</h3>
+                        <p>An internal operations tool for processing applications through defined states, with reviewer actions and draft/edit restrictions.</p>
+                        <ul class="project-points">
+                            <li>Workflow rules enforced on the Django backend rather than the UI.</li>
+                            <li>Typed API schemas with Django Ninja; React and Vite admin-style interface.</li>
+                            <li>Status transitions from draft through review to approval or rejection.</li>
+                        </ul>
+                        <ul class="tag-list">
+                            <li class="tag">Django Ninja</li>
+                            <li class="tag">React</li>
+                            <li class="tag">TypeScript</li>
+                            <li class="tag">SQLite</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a class="link-arrow" href="projects.html#workflow-tracker">Project details</a>
+                            <span class="spacer"></span>
+                            <a class="link-arrow link-external" href="https://github.com/Biden254/WorkFlow_Tracker" target="_blank" rel="noopener noreferrer">Code</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft" id="services">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <span class="section-label">02 — What I do</span>
+                        <h2 class="section-title">Engineering work I take on</h2>
+                        <p class="section-lead">I work on the parts of a product that have to actually function: application logic, APIs, data models, and the interfaces that use them.</p>
+                    </div>
+                    <a href="services.html" class="link-arrow section-link">Services &amp; approach</a>
+                </div>
+
+                <div class="grid grid-3">
+                    <article class="card service-card">
+                        <div class="card-eyebrow"><span class="index">01</span> Backend</div>
+                        <h3>Python &amp; Django development</h3>
+                        <p>Application logic, data models, admin tooling, and maintainable Django codebases — from a new feature to an existing project that needs work.</p>
+                        <ul class="service-deliver">
+                            <li>Feature implementation in Django applications</li>
+                            <li>Database integration and model design</li>
+                            <li>Authentication and account workflows</li>
+                        </ul>
+                    </article>
+                    <article class="card service-card">
+                        <div class="card-eyebrow"><span class="index">02</span> APIs</div>
+                        <h3>REST API development</h3>
+                        <p>Designing and building APIs for web applications and external services, then integrating, debugging, and maintaining them as the product changes.</p>
+                        <ul class="service-deliver">
+                            <li>Endpoint design and request validation</li>
+                            <li>Third-party and internal API integration</li>
+                            <li>Debugging and maintaining existing APIs</li>
+                        </ul>
+                    </article>
+                    <article class="card service-card">
+                        <div class="card-eyebrow"><span class="index">03</span> Full-stack</div>
+                        <h3>Full-stack web applications</h3>
+                        <p>Building complete features across React or Next.js front ends and Python or Node backends, with the databases and integrations they depend on.</p>
+                        <ul class="service-deliver">
+                            <li>React and Next.js interfaces</li>
+                            <li>Frontend and backend integration</li>
+                            <li>Database-backed application features</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <span class="section-label">03 — Experience</span>
+                        <h2 class="section-title">Collaborative engineering experience</h2>
+                        <p class="section-lead">I work in a team with Git-based review, testing, and shared code ownership — not only on isolated personal projects.</p>
+                    </div>
+                    <a href="experience.html" class="link-arrow section-link">Full experience</a>
+                </div>
+
+                <article class="role">
+                    <div class="role-head">
+                        <div>
+                            <h3>Full-Stack Software Engineer</h3>
+                            <p class="role-org">Solution Community · Volunteer</p>
+                        </div>
+                        <span class="role-period">2026 — Present</span>
+                    </div>
+                    <p class="role-summary">Contributing to a collaborative engineering team on a real web application, with a focus on account and authentication features across frontend and backend systems.</p>
+                    <ul class="bullet-list">
+                        <li>Implement account and authentication workflows, including email verification, password management, user profiles, and protected application pages.</li>
+                        <li>Integrated Google and Apple sign-in across development, QA, and production environments.</li>
+                        <li>Contribute to platform features across frontend, backend, APIs, and databases; collaborate through Git, pull requests, code review, and testing.</li>
+                    </ul>
+                    <div class="role-foot">
+                        <span class="tag">Python</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Git &amp; code review</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta-band" id="contact">
+            <div class="container">
+                <div>
+                    <span class="section-label">04 — Contact</span>
+                    <h2>Have a feature that needs building?</h2>
+                    <p>Tell me what you are working on and what needs to work at the end of it. I read every message and reply directly.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-primary">Discuss a project</a>
+                    <a href="mailto:bidendeclerk@gmail.com" class="btn btn-secondary">Email me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark" aria-hidden="true">LD</span>
+                        <span class="brand-name">
+                            <strong>Loren Deklerk</strong>
+                            <span>Full-Stack Engineer</span>
+                        </span>
+                    </a>
+                    <p>Full-stack software engineer building web applications, backend systems, and REST APIs with Python, Django, React, and TypeScript.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Pages</h3>
+                    <ul>
+                        <li><a href="projects.html">Work</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Elsewhere</h3>
+                    <ul>
+                        <li><a href="https://github.com/Biden254" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/loren-deklerk/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="mailto:bidendeclerk@gmail.com">Email</a></li>
+                        <li><a href="assets/docs/Loren-Deklerk-CV.pdf" target="_blank" rel="noopener noreferrer">View CV (PDF)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© <span data-current-year>2026</span> Loren Deklerk · Nairobi, Kenya</span>
+                <span>HTML · CSS · JavaScript</span>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>

@@ -3,87 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="theme-color" content="#101613">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Technical skills of Loren Deklerk: Python, TypeScript, JavaScript, SQL, Django, REST APIs, React, Next.js, PostgreSQL, MySQL, Firestore, AWS, Docker, and engineering practices.">
+    <meta property="og:title" content="Skills — Loren Deklerk">
+    <meta property="og:description" content="Backend, frontend, database, cloud, and engineering capabilities without arbitrary proficiency scores.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deklerk.netlify.app/skills.html">
+    <link rel="canonical" href="https://deklerk.netlify.app/skills.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Skills - Loren's Portfolio</title>
+    <title>Skills — Loren Deklerk</title>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">Loren</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="skills.html" class="active">Skills</a>
-            <a href="education.html">Education</a>
-            <a href="experience.html">Experience</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">LD</span>
+                <span class="brand-name">
+                    <strong>Loren Deklerk</strong>
+                    <span>Full-Stack Engineer</span>
+                </span>
+            </a>
+            <a class="header-cv" href="assets/docs/Loren-Deklerk-CV.pdf" download="Loren-Deklerk-CV.pdf" aria-label="Download CV as PDF">Download CV</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <nav class="nav" id="primary-nav" aria-label="Primary">
+                <a href="projects.html">Work</a>
+                <a href="experience.html">Experience</a>
+                <a href="services.html">Services</a>
+                <a href="index.html#about">About</a>
+                <a href="contact.html">Contact</a>
+                <a class="nav-cv-link" href="assets/docs/Loren-Deklerk-CV.pdf" download="Loren-Deklerk-CV.pdf">Download CV</a>
+            </nav>
+        </div>
     </header>
-    <section class="skills">
-        <h1>My Skills</h1>
-        <div class="skills-container">
-            <div class="skill">
-                <i class="fa-solid fa-cloud"></i>
-                <h2>AWS Cloud Fundamentals</h2>
-                <p>Understanding of core AWS services, architecture, and best practices.</p>
+
+    <main id="main">
+        <section class="page-intro">
+            <div class="container">
+                <span class="section-label">Skills</span>
+                <h1>Technologies I actually work with</h1>
+                <p>A practical view of my current capabilities, grouped by where they are used. The highlighted items are my primary working stack; the rest are technologies I have used in projects or training. No percentage scores or invented proficiency levels.</p>
+                <div class="page-meta">
+                    <span><span class="status-pill">Highlighted</span> = primary working stack</span>
+                    <span>Last reviewed November 2026</span>
+                </div>
             </div>
-            <div class="skill">
-                <i class="fa-solid fa-server"></i>
-                <h2>Linux and Networking</h2>
-                <p>Proficiency in Linux commands, file systems, and basic networking concepts.</p>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-2 align-start">
+                    <article class="skill-group">
+                        <h3>Programming languages</h3>
+                        <p>Languages I use to build application logic, scripts, and data access layers.</p>
+                        <ul class="skill-list">
+                            <li class="is-primary">Python</li>
+                            <li class="is-primary">TypeScript</li>
+                            <li class="is-primary">JavaScript</li>
+                            <li class="is-primary">SQL</li>
+                            <li>C</li>
+                            <li>PHP</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-group">
+                        <h3>Backend development</h3>
+                        <p>Server-side application logic, authentication, and API implementation.</p>
+                        <ul class="skill-list">
+                            <li class="is-primary">Django</li>
+                            <li class="is-primary">Django REST Framework</li>
+                            <li class="is-primary">REST API design</li>
+                            <li>Django Ninja</li>
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>Authentication &amp; authorization</li>
+                            <li>Google &amp; Apple sign-in integration</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-group">
+                        <h3>Frontend development</h3>
+                        <p>Building usable interfaces that connect cleanly to application data.</p>
+                        <ul class="skill-list">
+                            <li class="is-primary">React</li>
+                            <li class="is-primary">TypeScript</li>
+                            <li>Next.js</li>
+                            <li>Tailwind CSS</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Responsive layouts</li>
+                            <li>Accessible forms &amp; navigation</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-group">
+                        <h3>Databases</h3>
+                        <p>Schema design, migrations, queries, and connecting applications to stored data.</p>
+                        <ul class="skill-list">
+                            <li class="is-primary">PostgreSQL</li>
+                            <li class="is-primary">SQL</li>
+                            <li>MySQL</li>
+                            <li>Firestore</li>
+                            <li>SQLite</li>
+                            <li>Relational schema design</li>
+                            <li>Django ORM &amp; migrations</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-group">
+                        <h3>Cloud &amp; DevOps</h3>
+                        <p>Deploying applications and keeping development and production environments consistent.</p>
+                        <ul class="skill-list">
+                            <li class="is-primary">Git</li>
+                            <li class="is-primary">GitHub Actions</li>
+                            <li>AWS</li>
+                            <li>Docker</li>
+                            <li>Firebase</li>
+                            <li>CI/CD</li>
+                            <li>Linux</li>
+                            <li>Render &amp; Vercel deployments</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-group">
+                        <h3>Engineering practices</h3>
+                        <p>How I work inside a codebase and with other engineers.</p>
+                        <ul class="skill-list">
+                            <li class="is-primary">Git workflows</li>
+                            <li>Pull requests &amp; code review</li>
+                            <li>Debugging</li>
+                            <li>Software testing</li>
+                            <li>API integration</li>
+                            <li>Object-oriented programming</li>
+                            <li>Data structures &amp; algorithms</li>
+                            <li>Technical documentation</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="note" style="margin-top: 2rem;">
+                    <span><strong>How to read this:</strong> these are working capabilities, not claims of expert-level mastery in every technology. The projects page shows where each has been applied, and I am straightforward in conversation about what I have not used in production.</span>
+                </div>
             </div>
-            <div class="skill">
-                <i class="fa-solid fa-code"></i>
-                <h2>Python Programming</h2>
-                <p>Experience in writing Python scripts for automation and problem-solving.</p>
+        </section>
+
+        <section class="section section-soft">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <span class="section-label">Best fit</span>
+                        <h2 class="section-title">Where I am most useful right now</h2>
+                    </div>
+                </div>
+                <div class="grid grid-2">
+                    <article class="card">
+                        <h3>Django and API work</h3>
+                        <p>Adding features to an existing Django application, tightening API behaviour, or connecting a front end to a backend that already exists.</p>
+                        <div class="card-actions"><a class="link-arrow" href="services.html">Backend &amp; API services</a></div>
+                    </article>
+                    <article class="card">
+                        <h3>Full-stack feature delivery</h3>
+                        <p>Taking one feature from requirement to working software: data model, endpoint, interface, validation, and the edge cases around it.</p>
+                        <div class="card-actions"><a class="link-arrow" href="projects.html">See how this looks in practice</a></div>
+                    </article>
+                </div>
             </div>
-            <div class="skill">
-                <i class="fa-solid fa-database"></i>
-                <h2>Database Management</h2>
-                <p>Knowledge of relational databases like MySQL and NoSQL databases like DynamoDB.</p>
+        </section>
+
+        <section class="cta-band">
+            <div class="container">
+                <div>
+                    <h2>Not sure whether I fit the stack?</h2>
+                    <p>Send the requirement and the technologies involved. I will tell you directly whether it is a good fit.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-primary">Discuss a project</a>
+                    <a href="mailto:bidendeclerk@gmail.com" class="btn btn-secondary">Email me</a>
+                </div>
             </div>
-            <div class="skill">
-                <i class="fa-solid fa-cogs"></i>
-                <h2>DevOps Practices</h2>
-                <p>Understanding of CI/CD pipelines, version control, and infrastructure as code.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark" aria-hidden="true">LD</span>
+                        <span class="brand-name">
+                            <strong>Loren Deklerk</strong>
+                            <span>Full-Stack Engineer</span>
+                        </span>
+                    </a>
+                    <p>Full-stack software engineer building web applications, backend systems, and REST APIs with Python, Django, React, and TypeScript.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Pages</h3>
+                    <ul>
+                        <li><a href="projects.html">Work</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Elsewhere</h3>
+                    <ul>
+                        <li><a href="https://github.com/Biden254" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/loren-deklerk/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="mailto:bidendeclerk@gmail.com">Email</a></li>
+                        <li><a href="assets/docs/Loren-Deklerk-CV.pdf" target="_blank" rel="noopener noreferrer">View CV (PDF)</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="skill">
-                <i class="fa-solid fa-shield-alt"></i>
-                <h2>Cloud Security</h2>
-                <p>Basic knowledge of securing cloud environments and implementing IAM policies.</p>
-            </div>
-            <div class="skill">
-                <i class="fa-solid fa-chart-line"></i>
-                <h2>Monitoring and Troubleshooting</h2>
-                <p>Setting up monitoring tools like CloudWatch and resolving cloud-related issues.</p>
-            </div>
-            <div class="skill">
-                <i class="fa-solid fa-network-wired"></i>
-                <h2>Networking in AWS</h2>
-                <p>Configuring VPCs, subnets, and security groups for secure networking.</p>
-            </div>
-            <div class="skill">
-                <i class="fa-solid fa-hdd"></i>
-                <h2>Data Storage Solutions</h2>
-                <p>Designing and implementing storage solutions using S3, EBS, and Glacier.</p>
-            </div>
-            <div class="skill">
-                <i class="fa-solid fa-laptop-code"></i>
-                <h2>Infrastructure as Code</h2>
-                <p>Using tools like AWS CloudFormation to automate infrastructure deployment.</p>
-            </div>
-            <div class="skill">
-                <i class="fa-solid fa-users"></i>
-                <h2>Team Collaboration</h2>
-                <p>Experience working in teams using Agile methodologies and version control tools like Git.</p>
-            </div>
-            <div class="skill">
-                <i class="fa-solid fa-chalkboard-teacher"></i>
-                <h2>Soft Skills</h2>
-                <p>Strong communication, problem-solving, and time management skills.</p>
+            <div class="footer-bottom">
+                <span>© <span data-current-year>2026</span> Loren Deklerk · Nairobi, Kenya</span>
+                <span>Built with HTML, CSS, JavaScript, and Express</span>
             </div>
         </div>
-    </section>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>

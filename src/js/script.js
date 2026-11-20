@@ -1,48 +1,87 @@
-// --- Word typing effect (This block ONLY runs if the .typing-text span element is found on the current page) ---
-const typingText = document.querySelector(".typing-text span");
+/* Shared site behaviour: navigation, footer year, portrait fallback. */
+(function () {
+  "use strict";
 
-if (typingText) { // <-- This is the key check! It's true only on index.html
-    const words = [
-        "Cloud Practitioner",
-        "Cloud Developer",
-        "Cloud Architect",
-        "Cloud Engineer",
-        "Cloud Consultant",
-        "Software Engineer",
-        "Solutions Architect",
-        "Security Analyst",
-    ];
+  function initNavigation() {
+    var toggle = document.querySelector(".nav-toggle");
+    var nav = document.getElementById("primary-nav");
 
-    let index = 0;
-
-    function changeWord() {
-        typingText.textContent = words[index];
-        index = (index + 1) % words.length;
+    if (!toggle || !nav) {
+      return;
     }
 
-    setInterval(changeWord, 2000);
-    changeWord();
-}
-// --- End of word typing effect ---
-
-
-// --- Hamburger menu logic (This block runs on ALL pages where script.js is loaded) ---
-document.addEventListener("DOMContentLoaded", function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav');
-
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
+    function setOpen(open) {
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+      nav.classList.toggle("is-open", open);
     }
-});
-// --- End of hamburger menu logic ---
+
+    toggle.addEventListener("click", function () {
+      setOpen(toggle.getAttribute("aria-expanded") !== "true");
+    });
+
+    nav.addEventListener("click", function (event) {
+      if (event.target.closest("a")) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (
+        toggle.getAttribute("aria-expanded") === "true" &&
+        !nav.contains(event.target) &&
+        !toggle.contains(event.target)
+      ) {
+        setOpen(false);
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 960) {
+        setOpen(false);
+      }
+    });
+  }
+
+  function initYear() {
+    var year = String(new Date().getFullYear());
+    document.querySelectorAll("[data-current-year]").forEach(function (node) {
+      node.textContent = year;
+    });
+  }
+
+  function initPortraitFallback() {
+    var portrait = document.querySelector("[data-portrait]");
+    if (!portrait) {
+      return;
+    }
+
+    var image = portrait.querySelector("img");
+    if (!image) {
+      return;
+    }
+
+    function showFallback() {
+      portrait.classList.add("is-fallback");
+    }
+
+    if (image.complete && image.naturalWidth === 0) {
+      showFallback();
+    }
+
+    image.addEventListener("error", showFallback);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    initNavigation();
+    initYear();
+    initPortraitFallback();
+  });
+})();

@@ -3,87 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="theme-color" content="#101613">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Freelance engineering services: Python and Django backend development, REST API development and integration, full-stack web applications, bug fixing, database integration, and deployment.">
+    <meta property="og:title" content="Services — Loren Deklerk">
+    <meta property="og:description" content="Backend development, REST APIs, full-stack features, debugging, database integration, and cloud deployment.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deklerk.netlify.app/services.html">
+    <link rel="canonical" href="https://deklerk.netlify.app/services.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Services - Loren's Portfolio</title>
+    <title>Services — Loren Deklerk</title>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">Loren</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html" class="active">Services</a>
-            <a href="skills.html">Skills</a>
-            <a href="education.html">Education</a>
-            <a href="experience.html">Experience</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">LD</span>
+                <span class="brand-name">
+                    <strong>Loren Deklerk</strong>
+                    <span>Full-Stack Engineer</span>
+                </span>
+            </a>
+            <a class="header-cv" href="assets/docs/Loren-Deklerk-CV.pdf" download="Loren-Deklerk-CV.pdf" aria-label="Download CV as PDF">Download CV</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <nav class="nav" id="primary-nav" aria-label="Primary">
+                <a href="projects.html">Work</a>
+                <a href="experience.html">Experience</a>
+                <a href="services.html" aria-current="page">Services</a>
+                <a href="index.html#about">About</a>
+                <a href="contact.html">Contact</a>
+                <a class="nav-cv-link" href="assets/docs/Loren-Deklerk-CV.pdf" download="Loren-Deklerk-CV.pdf">Download CV</a>
+            </nav>
+        </div>
     </header>
-    <section class="services">
-        <h1>My Services</h1>
-        <div class="services-container">
-            <div class="service">
-                <i class="fa-solid fa-cloud"></i>
-                <h2>Cloud Practitioner Guidance</h2>
-                <p>Helping businesses understand and adopt cloud technologies effectively.</p>
+
+    <main id="main">
+        <section class="page-intro">
+            <div class="container">
+                <span class="section-label">Services</span>
+                <h1>Engineering help for products that need to work</h1>
+                <p>I take on backend features, API work, full-stack implementation, and the maintenance that keeps an application usable. The services below describe the problems I am equipped to solve — not a fixed menu of promises.</p>
+                <div class="page-meta">
+                    <span>Project-based or ongoing</span>
+                    <span>Remote · Nairobi, Kenya (UTC+3)</span>
+                    <span>Python, Django, React, TypeScript</span>
+                </div>
             </div>
-            <div class="service">
-                <i class="fa-solid fa-server"></i>
-                <h2>Cloud Infrastructure Setup</h2>
-                <p>Setting up secure and scalable AWS infrastructure tailored to your needs.</p>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-2">
+                    <article class="card service-card">
+                        <div class="card-eyebrow"><span class="index">01</span> Backend</div>
+                        <h2>Python &amp; Django backend development</h2>
+                        <p>Backend functionality, application logic, database integration, and maintainable Django applications. Useful when a product needs real server-side behaviour rather than a front-end prototype.</p>
+                        <h3 class="visually-hidden">What I can deliver</h3>
+                        <ul class="service-deliver">
+                            <li>Feature implementation in new or existing Django projects</li>
+                            <li>Models, migrations, views, admin configuration, and permissions</li>
+                            <li>Authentication, account, and profile workflows</li>
+                            <li>Refactoring code that has become difficult to change</li>
+                        </ul>
+                        <div class="project-links"><a class="link-arrow" href="contact.html">Discuss this work</a></div>
+                        <ul class="tag-list">
+                            <li class="tag">Python</li>
+                            <li class="tag">Django</li>
+                            <li class="tag">Django REST Framework</li>
+                            <li class="tag">PostgreSQL</li>
+                        </ul>
+                    </article>
+
+                    <article class="card service-card">
+                        <div class="card-eyebrow"><span class="index">02</span> APIs</div>
+                        <h2>REST API development</h2>
+                        <p>Building, integrating, debugging, and maintaining APIs for web applications and external services. This covers both new endpoints and APIs that already exist but are unreliable or hard to consume.</p>
+                        <h3 class="visually-hidden">What I can deliver</h3>
+                        <ul class="service-deliver">
+                            <li>Endpoint design, serialization, validation, and error responses</li>
+                            <li>Third-party API integration, including authentication and token handling</li>
+                            <li>Debugging failing requests and documenting API behaviour</li>
+                            <li>Connecting a front end to an existing backend service</li>
+                        </ul>
+                        <div class="project-links"><a class="link-arrow" href="contact.html">Discuss this work</a></div>
+                        <ul class="tag-list">
+                            <li class="tag">Django REST Framework</li>
+                            <li class="tag">Django Ninja</li>
+                            <li class="tag">Express.js</li>
+                            <li class="tag">REST</li>
+                        </ul>
+                    </article>
+
+                    <article class="card service-card">
+                        <div class="card-eyebrow"><span class="index">03</span> Full-stack</div>
+                        <h2>Full-stack web development</h2>
+                        <p>Building functional web applications with React, Next.js, Python, Django, and modern JavaScript — from the data model through to the interface a user actually operates.</p>
+                        <h3 class="visually-hidden">What I can deliver</h3>
+                        <ul class="service-deliver">
+                            <li>Feature delivery across front end, backend, and database</li>
+                            <li>React and Next.js interfaces with typed API clients</li>
+                            <li>Responsive layouts and accessible form flows</li>
+                            <li>Integration of existing services into a single application</li>
+                        </ul>
+                        <div class="project-links"><a class="link-arrow" href="contact.html">Discuss this work</a></div>
+                        <ul class="tag-list">
+                            <li class="tag">React</li>
+                            <li class="tag">Next.js</li>
+                            <li class="tag">TypeScript</li>
+                            <li class="tag">Django</li>
+                            <li class="tag">Tailwind CSS</li>
+                        </ul>
+                    </article>
+
+                    <article class="card service-card">
+                        <div class="card-eyebrow"><span class="index">04</span> Maintenance</div>
+                        <h2>Bug fixing &amp; application maintenance</h2>
+                        <p>Diagnosing application issues, fixing bugs, improving existing functionality, and maintaining software that is already in use. I start by reproducing the problem and understanding the cause before changing code.</p>
+                        <h3 class="visually-hidden">What I can deliver</h3>
+                        <ul class="service-deliver">
+                            <li>Reproducing and tracing defects across frontend and backend</li>
+                            <li>Fixing broken flows, validation gaps, and integration failures</li>
+                            <li>Incremental improvements to existing features</li>
+                            <li>Code review and explanation of what is failing and why</li>
+                        </ul>
+                        <div class="project-links"><a class="link-arrow" href="contact.html">Discuss this work</a></div>
+                        <ul class="tag-list">
+                            <li class="tag">Debugging</li>
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">Python</li>
+                            <li class="tag">Git</li>
+                        </ul>
+                    </article>
+
+                    <article class="card service-card">
+                        <div class="card-eyebrow"><span class="index">05</span> Data</div>
+                        <h2>Database integration</h2>
+                        <p>Working with PostgreSQL, MySQL, and Firestore to support application data requirements — schema design, queries, migrations, and connecting application code to the data it depends on.</p>
+                        <h3 class="visually-hidden">What I can deliver</h3>
+                        <ul class="service-deliver">
+                            <li>Relational schema and model design</li>
+                            <li>Django ORM models, migrations, and queries</li>
+                            <li>Connecting an application to PostgreSQL, MySQL, or Firestore</li>
+                            <li>Fixing data integrity and relationship problems</li>
+                        </ul>
+                        <div class="project-links"><a class="link-arrow" href="contact.html">Discuss this work</a></div>
+                        <ul class="tag-list">
+                            <li class="tag">PostgreSQL</li>
+                            <li class="tag">MySQL</li>
+                            <li class="tag">Firestore</li>
+                            <li class="tag">SQL</li>
+                        </ul>
+                    </article>
+
+                    <article class="card service-card">
+                        <div class="card-eyebrow"><span class="index">06</span> Delivery</div>
+                        <h2>Cloud deployment &amp; CI/CD</h2>
+                        <p>Helping deploy applications and establish practical development and deployment workflows using supported cloud and automation tools. The aim is a repeatable deployment, not a one-off upload.</p>
+                        <h3 class="visually-hidden">What I can deliver</h3>
+                        <ul class="service-deliver">
+                            <li>Containerizing applications with Docker</li>
+                            <li>Deploying to AWS, Render, Vercel, or similar platforms</li>
+                            <li>GitHub Actions workflows for build, test, and deploy steps</li>
+                            <li>Static hosting and CDN configuration where appropriate</li>
+                        </ul>
+                        <div class="project-links"><a class="link-arrow" href="contact.html">Discuss this work</a></div>
+                        <ul class="tag-list">
+                            <li class="tag">Docker</li>
+                            <li class="tag">AWS</li>
+                            <li class="tag">GitHub Actions</li>
+                            <li class="tag">CI/CD</li>
+                            <li class="tag">Linux</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
-            <div class="service">
-                <i class="fa-solid fa-dollar-sign"></i>
-                <h2>Cost Optimization</h2>
-                <p>Analyzing and optimizing AWS costs to maximize efficiency and minimize expenses.</p>
+        </section>
+
+        <section class="section section-soft">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <span class="section-label">Approach</span>
+                        <h2 class="section-title">How a project runs</h2>
+                        <p class="section-lead">I prefer small, reviewable increments over a long silent build. You should know what is being changed and why at each stage.</p>
+                    </div>
+                </div>
+                <div class="steps">
+                    <article class="step">
+                        <h3>Scope the problem</h3>
+                        <p>Clarify the requirement, the current behaviour, and what "done" means. If the request hides a data or integration problem, that gets identified before implementation starts.</p>
+                    </article>
+                    <article class="step">
+                        <h3>Build in increments</h3>
+                        <p>Implement the smallest working slice first, then extend it. Changes stay in Git with clear commits, and existing behaviour is checked before it is considered finished.</p>
+                    </article>
+                    <article class="step">
+                        <h3>Hand over working software</h3>
+                        <p>Deploy what was built, document any configuration or environment requirements, and walk through the changes. You should be able to run and maintain the result.</p>
+                    </article>
+                </div>
+                <div class="note" style="margin-top: 2rem;">
+                    <span><strong>Engagement terms:</strong> scope, deliverables, and timing are agreed in writing before work begins. I do not promise fixed delivery dates before understanding the codebase, and I do not take on work I cannot support with the technologies listed here.</span>
+                </div>
             </div>
-            <div class="service">
-                <i class="fa-solid fa-database"></i>
-                <h2>Cloud Migration</h2>
-                <p>Assisting in migrating on-premises workloads to AWS seamlessly.</p>
+        </section>
+
+        <section class="cta-band">
+            <div class="container">
+                <div>
+                    <h2>Tell me what needs to work</h2>
+                    <p>A short description of the feature, bug, or integration is enough to start the conversation.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-primary">Discuss a project</a>
+                    <a href="mailto:bidendeclerk@gmail.com" class="btn btn-secondary">Email me</a>
+                </div>
             </div>
-            <div class="service">
-                <i class="fa-solid fa-code"></i>
-                <h2>DevOps Practices</h2>
-                <p>Implementing CI/CD pipelines and automating deployments for faster delivery.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark" aria-hidden="true">LD</span>
+                        <span class="brand-name">
+                            <strong>Loren Deklerk</strong>
+                            <span>Full-Stack Engineer</span>
+                        </span>
+                    </a>
+                    <p>Full-stack software engineer building web applications, backend systems, and REST APIs with Python, Django, React, and TypeScript.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Pages</h3>
+                    <ul>
+                        <li><a href="projects.html">Work</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Elsewhere</h3>
+                    <ul>
+                        <li><a href="https://github.com/Biden254" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/loren-deklerk/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="mailto:bidendeclerk@gmail.com">Email</a></li>
+                        <li><a href="assets/docs/Loren-Deklerk-CV.pdf" target="_blank" rel="noopener noreferrer">View CV (PDF)</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="service">
-                <i class="fa-solid fa-shield-alt"></i>
-                <h2>Security and Compliance</h2>
-                <p>Ensuring AWS environments meet security and compliance standards.</p>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-chart-line"></i>
-                <h2>Monitoring and Troubleshooting</h2>
-                <p>Setting up monitoring tools like CloudWatch and resolving cloud-related issues.</p>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-cogs"></i>
-                <h2>Serverless Solutions</h2>
-                <p>Building serverless applications using AWS Lambda, API Gateway, and DynamoDB.</p>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-hdd"></i>
-                <h2>Data Storage Solutions</h2>
-                <p>Designing and implementing storage solutions using S3, EBS, and Glacier.</p>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-network-wired"></i>
-                <h2>Networking Solutions</h2>
-                <p>Configuring VPCs, subnets, and load balancers for secure networking.</p>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-database"></i>
-                <h2>Database Management</h2>
-                <p>Setting up and managing databases like RDS and DynamoDB.</p>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-chalkboard-teacher"></i>
-                <h2>Cloud Training</h2>
-                <p>Providing training sessions for individuals or teams on AWS basics.</p>
+            <div class="footer-bottom">
+                <span>© <span data-current-year>2026</span> Loren Deklerk · Nairobi, Kenya</span>
+                <span>Built with HTML, CSS, JavaScript, and Express</span>
             </div>
         </div>
-    </section>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
